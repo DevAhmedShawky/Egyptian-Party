@@ -1,0 +1,233 @@
+/* Start Variables */
+:root {
+  --main-color: #444;
+  --second-color: #999;
+  --main-background-color: rgba(214, 46, 51, 0.6);
+  --main-transition: 0.4s;
+}
+/* End Variables */
+
+/* Start global rules */
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  overflow: hidden;
+  scroll-behavior: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.over-lay {
+  background-color: var(--main-background-color);
+}
+/* End global rules */
+
+/* Start Loading Of Page */
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  z-index: 999999999999;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  color: #fff;
+  display: flex;
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  clip-path: inset(0 3ch 0 0);
+  animation: l4 1s steps(4) infinite;
+}
+.loader:before {
+  content: "Loading...";
+}
+@keyframes l4 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
+/* End Loading Of Page */
+
+/* Start Secition Home */
+.home .home-links {
+  height: 100vh;
+  z-index: 9999999;
+  width: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.home .home-links a {
+  padding: 20px 8px 20px 32px;
+  color: #fff;
+  z-index: 1;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.home .home-links a:hover {
+  color: rgba(214, 46, 51, 0.4) !important;
+}
+
+.close-tap {
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
+}
+
+.home .home-links a:first-child svg {
+  cursor: pointer;
+}
+
+.home {
+  background-image: url(../imgs/events-heavenly-header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+}
+.home .over-lay {
+  /* background-color: var(--main-background-color); */
+}
+
+.home .over-lay .content-head {
+  margin-top: 200px;
+}
+
+.home .over-lay .content-head h1 {
+  font-size: 3.75rem;
+}
+
+.home-icon {
+  top: 70%;
+}
+
+/* End Secition Home */
+
+/* Start Slider Secition */
+
+.slider {
+  width: 70%;
+  margin: auto;
+}
+
+.slider .toggle {
+  background-color: rgba(214, 46, 51, 0.4);
+  cursor: pointer;
+}
+
+.slider div {
+  background-color: #999;
+  display: none;
+}
+
+.slider .first {
+  display: block;
+}
+
+/* End Slider Secition */
+
+/* Start Count Secition */
+.count {
+  background-image: url(../imgs/invitation-2508607__340.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.count .container {
+  padding-top: 100px;
+}
+
+.count .tim {
+  padding: 50px;
+  border: 1px solid #fff;
+  font-size: 30px;
+}
+/* End Count Secition */
+
+/* Start Contact Secition */
+.contact .container .des,
+.contact .container .contact-content .description,
+.contact .container .contact-content .info svg,
+.contact .container .contact-content .social li svg {
+  color: #777;
+}
+
+.contact .container .contact-content h3 {
+  letter-spacing: -1px;
+  font-size: 22px;
+}
+
+.contact .container .contact-content .info li {
+  line-height: 3;
+}
+
+.contact .container .contact-content .info li:nth-child(2) a {
+  color: var(--main-background-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.contact .container .contact-content .info li:nth-child(2) a:hover {
+  color: #d62e33;
+}
+
+.contact .container .contact-content .social li {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.contact .container .contact-content .social li:hover {
+  background-color: #d62e33;
+}
+
+.contact .container .contact-content .social li:hover svg {
+  color: #fff;
+}
+
+.contact .container .about-contact input:focus,
+.contact .container .about-contact textarea:focus {
+  outline: none;
+}
+
+.btn-danger:focus {
+  box-shadow: none !important;
+}
+/* End Contact Secition */
